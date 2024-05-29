@@ -1,4 +1,10 @@
 import Link from 'next/link';
+const handleLogout = () =>{
+    console.log('logout')
+    localStorage.clear();
+    window.location.href = "/";
+
+}
 const Header = () => {
     return (
         <header>
@@ -15,6 +21,8 @@ const Header = () => {
             <Link href="/addService">
                 Add Service
             </Link>
+            <br></br>
+            <button onClick={handleLogout}>Logout</button>
         </header>
     );
 };
